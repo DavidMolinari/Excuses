@@ -16,8 +16,11 @@ namespace Excuses
 {
     public partial class Main : MetroForm
     {
+        DocX doc = DocX.Create(@"C:\Users\davv\Documents\DocXExample2.docx");
+
         public Main()
         {
+
             InitializeComponent();
             this.Theme = MetroFramework.MetroThemeStyle.Light;
         }
@@ -26,9 +29,9 @@ namespace Excuses
 
         private void Main_Load(object sender, EventArgs e)
         {
-            using (DocX doc = DocX.Create(@"C:\Users\davv\Documents\DocXExample2.docx"))
-            {
-                doc.AddHeaders();
+
+
+        doc.AddHeaders();
 
                 using (MemoryStream mS = new MemoryStream())
                 {
@@ -56,57 +59,66 @@ namespace Excuses
 
                     // Je les insère dans l'ordre inverse d'apparition sur le document
                     // Insert AFTER Self /!\ les paragraph vont s'empiler et le premier redescendra en bas.
-                    Paragraph pTopLeft = doc.InsertParagraph("David MOLINARI");
+                    Paragraph pTopLeft = doc.InsertParagraph(txtPrenomNOm.Text);
                     pTopLeft.InsertParagraphBeforeSelf("\n");
                     pTopLeft.InsertParagraphBeforeSelf("\n");
-                    pTopLeft.InsertParagraphAfterSelf("david@rmolinari.net");
-                    pTopLeft.InsertParagraphAfterSelf("06 666 666 66");
-                    pTopLeft.InsertParagraphAfterSelf("83 000 Toulon");
-                    pTopLeft.InsertParagraphAfterSelf("Avenue Winston Churchill");
-                    pTopLeft.InsertParagraphAfterSelf("Lycée Bonaparte");
-
-
+                    pTopLeft.InsertParagraphAfterSelf(txaEmail.Text);
+                    pTopLeft.InsertParagraphAfterSelf(txtTel.Text);
+                    pTopLeft.InsertParagraphAfterSelf(txtCpVille.Text);
+                    pTopLeft.InsertParagraphAfterSelf(txtAdresseEtablissement.Text);
+                    pTopLeft.InsertParagraphAfterSelf(txtEtablissement.Text);
                     /*
                     * BLOC DROITE
                     * A l’attention de { 0 }
                     * Nom de l'établissement
                     * Ville
                     */
-                    Paragraph pTopRight= doc.InsertParagraph("\t\t\t\t\t\tÀ l'attention de monsieur X ");
-                    pTopRight.InsertParagraphAfterSelf("\t\t\t\t\t\tToulon");
-                    pTopRight.InsertParagraphAfterSelf("\t\t\t\t\t\tLycée Bonaparte");
-
-
+                    Paragraph pTopRight= doc.InsertParagraph("\t\t\t\t\t\t" + lblAttention.Text + txaAlAttention.Text);
+                    pTopRight.InsertParagraphAfterSelf("\t\t\t\t\t\t" + txtVille.Text);
+                    pTopRight.InsertParagraphAfterSelf("\t\t\t\t\t\t"+ txtEtablissement.Text);
                     /*
                     * BLOC MAIN
                     */
-                    Paragraph pMain = doc.InsertParagraph("Objet : Lettre d'absence.").Bold();
+                    Paragraph pMain = doc.InsertParagraph(lblObjet.Text).Bold();
                     pMain.InsertParagraphBeforeSelf("\n");
-
                     pMain.InsertParagraphAfterSelf("\n");
                     pMain.InsertParagraphAfterSelf("\n");
-
                     pMain.InsertParagraphAfterSelf("\n");
-
                     pMain.InsertParagraphAfterSelf("\n");
-
                     pMain.InsertParagraphAfterSelf("\n");
+                    pMain.InsertParagraphBeforeSelf(lblMainQuatre.Text); // 4
+                    pMain.InsertParagraphBeforeSelf(lblMainTrois.Text); // 3
+                    pMain.InsertParagraphBeforeSelf(lblMaindeux.Text + cbxExcuses.GetItemText(this.cbxExcuses.SelectedItem)); // 2
+                    pMain.InsertParagraphBeforeSelf(cbxSexe.GetItemText(this.cbxSexe.SelectedItem) + lblMainUn.Text + dateTimeMain.ToString()) ; // 1
+                    ///FIXME Remettre les paragraphes dans le bon Ordre
 
-                    pMain.InsertParagraphAfterSelf("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
 
-
-                    /*
+                    /*111
                     * BLOC BOT RIGHT : 
                     * {ville} le :  + Date
                     */
                     Paragraph pBot = doc.InsertParagraph("Toulon le : 04/04/0444");
                     pBot.Alignment = Alignment.right;
 
-                }
+                
 
 
-                doc.Save();
+                //doc.Save();
             }
             }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            ///FIXME Save Doc
+            Main_Load(sender,e);
+            doc.Save();
+        }
+
+        private void btnSaveInfos_Click(object sender, EventArgs e)
+        {
+            ///FIXME Save Inputs modifications en temps réel
+
+            this.txtPrenomNOm.Text = txtPrenomNOm.Text;
+        }
     }
 }
