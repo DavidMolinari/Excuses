@@ -55,16 +55,13 @@ namespace Excuses
                     // Je les insère dans l'ordre inverse d'apparition sur le document
                     // Insert AFTER Self /!\ les paragraph vont s'empiler et le premier redescendra en bas.
                     Paragraph pTopLeft = doc.InsertParagraph("David MOLINARI");
+                    pTopLeft.InsertParagraphBeforeSelf("\n");
+                    pTopLeft.InsertParagraphBeforeSelf("\n");
                     pTopLeft.InsertParagraphAfterSelf("david@rmolinari.net");
                     pTopLeft.InsertParagraphAfterSelf("06 666 666 66");
                     pTopLeft.InsertParagraphAfterSelf("83 000 Toulon");
                     pTopLeft.InsertParagraphAfterSelf("Avenue Winston Churchill");
                     pTopLeft.InsertParagraphAfterSelf("Lycée Bonaparte");
-
-
-
-
-                    //doc.InsertParagraph(pTopLeft);
 
 
                     /*
@@ -73,17 +70,35 @@ namespace Excuses
                     * Nom de l'établissement
                     * Ville
                     */
+                    Paragraph pTopRight= doc.InsertParagraph("\t\t\t\t\t\tÀ l'attention de monsieur X ");
+                    pTopRight.InsertParagraphAfterSelf("\t\t\t\t\t\tToulon");
+                    pTopRight.InsertParagraphAfterSelf("\t\t\t\t\t\tLycée Bonaparte");
 
 
                     /*
                     * BLOC MAIN
                     */
+                    Paragraph pMain = doc.InsertParagraph("Objet : Lettre d'absence.").Bold();
+                    pMain.InsertParagraphBeforeSelf("\n");
+
+                    pMain.InsertParagraphAfterSelf("\n");
+                    pMain.InsertParagraphAfterSelf("\n");
+
+                    pMain.InsertParagraphAfterSelf("\n");
+
+                    pMain.InsertParagraphAfterSelf("\n");
+
+                    pMain.InsertParagraphAfterSelf("\n");
+
+                    pMain.InsertParagraphAfterSelf("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
 
 
                     /*
                     * BLOC BOT RIGHT : 
                     * {ville} le :  + Date
                     */
+                    Paragraph pBot = doc.InsertParagraph("Toulon le : 04/04/0444");
+                    pBot.Alignment = Alignment.right;
 
                 }
 
@@ -91,5 +106,6 @@ namespace Excuses
                 doc.Save();
             }
             }
+
     }
 }
