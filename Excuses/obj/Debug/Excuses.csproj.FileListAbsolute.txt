@@ -8,3 +8,5 @@ C:\Users\davv\Documents\GitHub\Excuses\Excuses\obj\Debug\Excuses.csproj.Generate
 C:\Users\davv\Documents\GitHub\Excuses\Excuses\obj\Debug\Excuses.exe
 C:\Users\davv\Documents\GitHub\Excuses\Excuses\obj\Debug\Excuses.pdb
 C:\Users\davv\Documents\GitHub\Excuses\Excuses\obj\Debug\Excuses.Main.resources
+C:\Users\davv\Documents\GitHub\Excuses\Excuses\bin\Debug\MetroFramework.dll
+C:\Users\davv\Documents\GitHub\Excuses\Excuses\bin\Debug\MetroFramework.Fonts.dll

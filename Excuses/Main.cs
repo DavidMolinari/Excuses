@@ -9,11 +9,11 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using MetroFramework.Forms;
 
-namespace Excuses
+namespace Excuses 
 {
-    public partial class Main : Form
+    public partial class Main : MetroForm
     {
         public Main()
         {
@@ -28,21 +28,62 @@ namespace Excuses
             {
                 doc.AddHeaders();
 
-                using (MemoryStream ms = new MemoryStream())
+                using (MemoryStream mS = new MemoryStream())
                 {
 
                     System.Drawing.Image myImg = Excuses.Properties.Resources.header;
 
-                    myImg.Save(ms, myImg.RawFormat);  // Save dans le flux mémoire
-                    ms.Seek(0, SeekOrigin.Begin);
-                    Novacode.Image img = doc.AddImage(ms); // Create 
-                    Picture pic1 = img.CreatePicture(); pic1.Width = 600;
+                    myImg.Save(mS, myImg.RawFormat);  // Save dans le flux mémoire
+                    mS.Seek(0, SeekOrigin.Begin);
+                    Novacode.Image imgHeader = doc.AddImage(mS); // Create 
+                    Picture picHeader = imgHeader.CreatePicture(); picHeader.Width = 600;
                     // HEADER : Incrustation d'une image dans l'entête de page
                     Header header_default = doc.Headers.odd;
-                    Paragraph p1 = header_default.InsertParagraph();
-                    p1.InsertPicture(pic1, 0);
-                    p1.Alignment = Alignment.center;
+                    Paragraph pHeader = header_default.InsertParagraph();
+                    pHeader.InsertPicture(picHeader, 0);
+                    pHeader.Alignment = Alignment.center;
+                    /*
+                    * BLOC GAUCHE TOP
+                    * Prenom NOM
+                    * Nom de l'établissement
+                    * Addresse de l'établissement
+                    * CP + Ville
+                    * Numéro de Telephone personnel
+                    * Email personnel
+                    */
 
+                    // Je les insère dans l'ordre inverse d'apparition sur le document
+                    // Insert AFTER Self /!\ les paragraph vont s'empiler et le premier redescendra en bas.
+                    Paragraph pTopLeft = doc.InsertParagraph("David MOLINARI");
+                    pTopLeft.InsertParagraphAfterSelf("david@rmolinari.net");
+                    pTopLeft.InsertParagraphAfterSelf("06 666 666 66");
+                    pTopLeft.InsertParagraphAfterSelf("83 000 Toulon");
+                    pTopLeft.InsertParagraphAfterSelf("Avenue Winston Churchill");
+                    pTopLeft.InsertParagraphAfterSelf("Lycée Bonaparte");
+
+
+
+
+                    //doc.InsertParagraph(pTopLeft);
+
+
+                    /*
+                    * BLOC DROITE
+                    * A l’attention de { 0 }
+                    * Nom de l'établissement
+                    * Ville
+                    */
+
+
+                    /*
+                    * BLOC MAIN
+                    */
+
+
+                    /*
+                    * BLOC BOT RIGHT : 
+                    * {ville} le :  + Date
+                    */
 
                 }
 
