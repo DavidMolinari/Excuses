@@ -10,6 +10,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using MetroFramework.Forms;
+using System.Windows.Forms;
 
 namespace Excuses 
 {
@@ -18,6 +19,7 @@ namespace Excuses
         public Main()
         {
             InitializeComponent();
+            this.Theme = MetroFramework.MetroThemeStyle.Light;
         }
 
         public static object Properties { get; private set; }
@@ -106,6 +108,5 @@ namespace Excuses
                 doc.Save();
             }
             }
-
     }
 }
