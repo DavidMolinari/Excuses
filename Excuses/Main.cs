@@ -16,7 +16,10 @@ namespace Excuses
 {
     public partial class Main : MetroForm
     {
-        DocX doc = DocX.Create(@"C:\Users\davv\Documents\DocXExample2.docx");
+        /// <summary>
+        /// Initialisation d'un document avec un nom choisi en dur pour l'instant TODO L'init avec une textBox
+        /// </summary>
+        DocX doc = Tools.initDoc("NTM");
 
         public Main()
         {
@@ -29,23 +32,16 @@ namespace Excuses
 
         private void Main_Load(object sender, EventArgs e)
         {
+            Tools.addHeader(doc); // Ajout d'un header avec une image incrustée dedans TODO : Input image personnelle
+                 
+             // T O D O : Méthodes de génération du document à commencer. 
 
 
-                doc.AddHeaders();
 
-                using (MemoryStream mS = new MemoryStream())
-                {
-                    System.Drawing.Image myImg = Excuses.Properties.Resources.header;
-                    myImg.Save(mS, myImg.RawFormat);  // Save dans le flux mémoire
-                    mS.Seek(0, SeekOrigin.Begin);
-                    Novacode.Image imgHeader = doc.AddImage(mS); // Create 
-                    Picture picHeader = imgHeader.CreatePicture(); picHeader.Width = 600;
-                    // HEADER : Incrustation d'une image dans l'entête de page
-                    Header header_default = doc.Headers.odd;
-                    Paragraph pHeader = header_default.InsertParagraph();
-                    pHeader.InsertPicture(picHeader, 0);
-                    pHeader.Alignment = Alignment.center;
-                    /*
+
+
+
+            /*
                     * BLOC GAUCHE TOP
                     * Prenom NOM
                     * Nom de l'établissement
@@ -97,8 +93,8 @@ namespace Excuses
                     Paragraph pBot = doc.InsertParagraph("Toulon le : 04/04/0444");
                     pBot.Alignment = Alignment.right;
 
-                //doc.Save();
-            }
+                doc.Save();
+            
             }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -112,6 +108,11 @@ namespace Excuses
         {
             ///FIXME Save Inputs modifications en temps réel
             this.txtPrenomNOm.Text = txtPrenomNOm.Text;
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

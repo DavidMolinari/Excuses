@@ -71,6 +71,6 @@ namespace Excuses
             exc.DateAbsence = new DateTime();
             exc.DateNow = new DateTime();
         }
-    
+        
     }
 }
