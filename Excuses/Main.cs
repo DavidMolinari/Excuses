@@ -31,13 +31,11 @@ namespace Excuses
         {
 
 
-        doc.AddHeaders();
+                doc.AddHeaders();
 
                 using (MemoryStream mS = new MemoryStream())
                 {
-
                     System.Drawing.Image myImg = Excuses.Properties.Resources.header;
-
                     myImg.Save(mS, myImg.RawFormat);  // Save dans le flux mémoire
                     mS.Seek(0, SeekOrigin.Begin);
                     Novacode.Image imgHeader = doc.AddImage(mS); // Create 
@@ -92,16 +90,12 @@ namespace Excuses
                     pMain.InsertParagraphBeforeSelf(cbxSexe.GetItemText(this.cbxSexe.SelectedItem) + lblMainUn.Text + dateTimeMain.ToString()) ; // 1
                     ///FIXME Remettre les paragraphes dans le bon Ordre
 
-
                     /*111
                     * BLOC BOT RIGHT : 
                     * {ville} le :  + Date
                     */
                     Paragraph pBot = doc.InsertParagraph("Toulon le : 04/04/0444");
                     pBot.Alignment = Alignment.right;
-
-                
-
 
                 //doc.Save();
             }
@@ -117,7 +111,6 @@ namespace Excuses
         private void btnSaveInfos_Click(object sender, EventArgs e)
         {
             ///FIXME Save Inputs modifications en temps réel
-
             this.txtPrenomNOm.Text = txtPrenomNOm.Text;
         }
     }

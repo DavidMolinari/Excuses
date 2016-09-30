@@ -56,13 +56,13 @@ namespace Excuses
             this.cbxSexe = new MetroFramework.Controls.MetroComboBox();
             this.lblObjet = new MetroFramework.Controls.MetroLabel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.tileConfig = new MetroFramework.Controls.MetroTile();
-            this.btnSave = new MetroFramework.Controls.MetroTile();
-            this.btnSaveInfos = new MetroFramework.Controls.MetroTile();
-            this.btnAddExcuse = new MetroFramework.Controls.MetroTile();
-            this.txtExcusesAdd = new MetroFramework.Controls.MetroTextBox();
             this.lblAddExcuses = new MetroFramework.Controls.MetroLabel();
+            this.txtExcusesAdd = new MetroFramework.Controls.MetroTextBox();
             this.btnReset = new MetroFramework.Controls.MetroTile();
+            this.btnAddExcuse = new MetroFramework.Controls.MetroTile();
+            this.btnSaveInfos = new MetroFramework.Controls.MetroTile();
+            this.btnSave = new MetroFramework.Controls.MetroTile();
+            this.tileConfig = new MetroFramework.Controls.MetroTile();
             metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(metroStyleManager1)).BeginInit();
             this.panelTopGauche.SuspendLayout();
@@ -360,22 +360,38 @@ namespace Excuses
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             // 
-            // tileConfig
+            // lblAddExcuses
             // 
-            this.tileConfig.Location = new System.Drawing.Point(28, 560);
-            this.tileConfig.Name = "tileConfig";
-            this.tileConfig.Size = new System.Drawing.Size(171, 23);
-            this.tileConfig.TabIndex = 7;
-            this.tileConfig.Text = "Configuration ";
+            this.lblAddExcuses.AutoSize = true;
+            this.lblAddExcuses.Location = new System.Drawing.Point(0, 40);
+            this.lblAddExcuses.Name = "lblAddExcuses";
+            this.lblAddExcuses.Size = new System.Drawing.Size(140, 20);
+            this.lblAddExcuses.TabIndex = 10;
+            this.lblAddExcuses.Text = "Ajouter des excuses :";
             // 
-            // btnSave
+            // txtExcusesAdd
             // 
-            this.btnSave.Location = new System.Drawing.Point(4, 3);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(223, 23);
-            this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "Sauvegarder le document";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.txtExcusesAdd.Location = new System.Drawing.Point(2, 66);
+            this.txtExcusesAdd.Name = "txtExcusesAdd";
+            this.txtExcusesAdd.Size = new System.Drawing.Size(249, 23);
+            this.txtExcusesAdd.TabIndex = 9;
+            this.txtExcusesAdd.Text = "J\'ai raté mon train :>";
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(554, 3);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(187, 23);
+            this.btnReset.TabIndex = 8;
+            this.btnReset.Text = "Reset";
+            // 
+            // btnAddExcuse
+            // 
+            this.btnAddExcuse.Location = new System.Drawing.Point(284, 66);
+            this.btnAddExcuse.Name = "btnAddExcuse";
+            this.btnAddExcuse.Size = new System.Drawing.Size(187, 23);
+            this.btnAddExcuse.TabIndex = 8;
+            this.btnAddExcuse.Text = "Ajouter";
             // 
             // btnSaveInfos
             // 
@@ -386,38 +402,22 @@ namespace Excuses
             this.btnSaveInfos.Text = "Sauvegarder les informations";
             this.btnSaveInfos.Click += new System.EventHandler(this.btnSaveInfos_Click);
             // 
-            // btnAddExcuse
+            // btnSave
             // 
-            this.btnAddExcuse.Location = new System.Drawing.Point(284, 66);
-            this.btnAddExcuse.Name = "btnAddExcuse";
-            this.btnAddExcuse.Size = new System.Drawing.Size(187, 23);
-            this.btnAddExcuse.TabIndex = 8;
-            this.btnAddExcuse.Text = "Ajouter";
+            this.btnSave.Location = new System.Drawing.Point(4, 3);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(223, 23);
+            this.btnSave.TabIndex = 7;
+            this.btnSave.Text = "Sauvegarder le document";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtExcusesAdd
+            // tileConfig
             // 
-            this.txtExcusesAdd.Location = new System.Drawing.Point(2, 66);
-            this.txtExcusesAdd.Name = "txtExcusesAdd";
-            this.txtExcusesAdd.Size = new System.Drawing.Size(249, 23);
-            this.txtExcusesAdd.TabIndex = 9;
-            this.txtExcusesAdd.Text = "J\'ai raté mon train :>";
-            // 
-            // lblAddExcuses
-            // 
-            this.lblAddExcuses.AutoSize = true;
-            this.lblAddExcuses.Location = new System.Drawing.Point(0, 40);
-            this.lblAddExcuses.Name = "lblAddExcuses";
-            this.lblAddExcuses.Size = new System.Drawing.Size(140, 20);
-            this.lblAddExcuses.TabIndex = 10;
-            this.lblAddExcuses.Text = "Ajouter des excuses :";
-            // 
-            // btnReset
-            // 
-            this.btnReset.Location = new System.Drawing.Point(554, 3);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(187, 23);
-            this.btnReset.TabIndex = 8;
-            this.btnReset.Text = "Reset";
+            this.tileConfig.Location = new System.Drawing.Point(28, 560);
+            this.tileConfig.Name = "tileConfig";
+            this.tileConfig.Size = new System.Drawing.Size(171, 23);
+            this.tileConfig.TabIndex = 7;
+            this.tileConfig.Text = "Configuration ";
             // 
             // Main
             // 
@@ -431,7 +431,7 @@ namespace Excuses
             this.Controls.Add(this.panelTopGauche);
             this.Controls.Add(this.lblTopGauche);
             this.Name = "Main";
-            this.Text = "Excuses Generation";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(metroStyleManager1)).EndInit();
             this.panelTopGauche.ResumeLayout(false);
