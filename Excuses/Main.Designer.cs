@@ -1,4 +1,7 @@
 ﻿using System.Drawing;
+using System.Windows.Forms;
+using MetroFramework.Controls;
+
 namespace Excuses
 {
     partial class Main
@@ -32,32 +35,32 @@ namespace Excuses
             this.components = new System.ComponentModel.Container();
             MetroFramework.Components.MetroStyleManager metroStyleManager1;
             this.lblTopGauche = new MetroFramework.Controls.MetroLabel();
-            this.txtPrenomNOm = new MetroFramework.Controls.MetroTextBox();
-            this.txtEtablissement = new MetroFramework.Controls.MetroTextBox();
-            this.txtAdresseEtablissement = new MetroFramework.Controls.MetroTextBox();
-            this.txtCpVille = new MetroFramework.Controls.MetroTextBox();
-            this.txtTel = new MetroFramework.Controls.MetroTextBox();
-            this.txaEmail = new MetroFramework.Controls.MetroTextBox();
-            this.txaAlAttention = new MetroFramework.Controls.MetroTextBox();
+            this.TxtPrenomNOm = new MetroFramework.Controls.MetroTextBox();
+            this.TxtEtablissement = new MetroFramework.Controls.MetroTextBox();
+            this.TxtAdresseEtablissement = new MetroFramework.Controls.MetroTextBox();
+            this.TxtCpVille = new MetroFramework.Controls.MetroTextBox();
+            this.TxtTel = new MetroFramework.Controls.MetroTextBox();
+            this.TxaEmail = new MetroFramework.Controls.MetroTextBox();
+            this.TxaAlAttention = new MetroFramework.Controls.MetroTextBox();
             this.lblAttention = new MetroFramework.Controls.MetroLabel();
-            this.txaEtablissementBis = new MetroFramework.Controls.MetroTextBox();
-            this.txtVille = new MetroFramework.Controls.MetroTextBox();
+            this.TxaEtablissementBis = new MetroFramework.Controls.MetroTextBox();
+            this.TxtVille = new MetroFramework.Controls.MetroTextBox();
             this.panelTopGauche = new MetroFramework.Controls.MetroPanel();
             this.panelTopRight = new MetroFramework.Controls.MetroPanel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.lblMainCinq = new MetroFramework.Controls.MetroLabel();
-            this.cbxExcuses = new MetroFramework.Controls.MetroComboBox();
+            this.CbxExcuses = new MetroFramework.Controls.MetroComboBox();
             this.lblMainQuatre = new MetroFramework.Controls.MetroLabel();
             this.lblMainTrois = new MetroFramework.Controls.MetroLabel();
             this.lblMaindeux = new MetroFramework.Controls.MetroLabel();
-            this.dateTimeSignature = new System.Windows.Forms.DateTimePicker();
-            this.dateTimeMain = new System.Windows.Forms.DateTimePicker();
+            this.DateTimeSignature = new System.Windows.Forms.DateTimePicker();
+            this.DateTimeMain = new System.Windows.Forms.DateTimePicker();
             this.lblMainUn = new MetroFramework.Controls.MetroLabel();
-            this.cbxSexe = new MetroFramework.Controls.MetroComboBox();
+            this.CbxSexe = new MetroFramework.Controls.MetroComboBox();
             this.lblObjet = new MetroFramework.Controls.MetroLabel();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.lblAddExcuses = new MetroFramework.Controls.MetroLabel();
-            this.txtExcusesAdd = new MetroFramework.Controls.MetroTextBox();
+            this.TxtExcusesAdd = new MetroFramework.Controls.MetroTextBox();
             this.btnReset = new MetroFramework.Controls.MetroTile();
             this.btnAddExcuse = new MetroFramework.Controls.MetroTile();
             this.btnSaveInfos = new MetroFramework.Controls.MetroTile();
@@ -88,73 +91,73 @@ namespace Excuses
             // 
             // txtPrenomNOm
             // 
-            this.txtPrenomNOm.BackColor = System.Drawing.Color.Maroon;
-            this.txtPrenomNOm.ForeColor = System.Drawing.Color.Black;
-            this.txtPrenomNOm.Location = new System.Drawing.Point(3, 3);
-            this.txtPrenomNOm.Name = "txtPrenomNOm";
-            this.txtPrenomNOm.Size = new System.Drawing.Size(211, 23);
-            this.txtPrenomNOm.TabIndex = 1;
-            this.txtPrenomNOm.Text = "David MOLINARI";
+            this.TxtPrenomNOm.BackColor = System.Drawing.Color.Maroon;
+            this.TxtPrenomNOm.ForeColor = System.Drawing.Color.Black;
+            this.TxtPrenomNOm.Location = new System.Drawing.Point(3, 3);
+            this.TxtPrenomNOm.Name = "txtPrenomNOm";
+            this.TxtPrenomNOm.Size = new System.Drawing.Size(211, 23);
+            this.TxtPrenomNOm.TabIndex = 1;
+            this.TxtPrenomNOm.Text = "David MOLINARI";
             // 
             // txtEtablissement
             // 
-            this.txtEtablissement.BackColor = System.Drawing.Color.Maroon;
-            this.txtEtablissement.ForeColor = System.Drawing.Color.Black;
-            this.txtEtablissement.Location = new System.Drawing.Point(3, 32);
-            this.txtEtablissement.Name = "txtEtablissement";
-            this.txtEtablissement.Size = new System.Drawing.Size(211, 23);
-            this.txtEtablissement.TabIndex = 1;
-            this.txtEtablissement.Text = "Lycée Bonaparte";
+            this.TxtEtablissement.BackColor = System.Drawing.Color.Maroon;
+            this.TxtEtablissement.ForeColor = System.Drawing.Color.Black;
+            this.TxtEtablissement.Location = new System.Drawing.Point(3, 32);
+            this.TxtEtablissement.Name = "txtEtablissement";
+            this.TxtEtablissement.Size = new System.Drawing.Size(211, 23);
+            this.TxtEtablissement.TabIndex = 1;
+            this.TxtEtablissement.Text = "Lycée Bonaparte";
             // 
             // txtAdresseEtablissement
             // 
-            this.txtAdresseEtablissement.BackColor = System.Drawing.Color.Maroon;
-            this.txtAdresseEtablissement.ForeColor = System.Drawing.Color.Black;
-            this.txtAdresseEtablissement.Location = new System.Drawing.Point(2, 61);
-            this.txtAdresseEtablissement.Name = "txtAdresseEtablissement";
-            this.txtAdresseEtablissement.Size = new System.Drawing.Size(212, 23);
-            this.txtAdresseEtablissement.TabIndex = 1;
-            this.txtAdresseEtablissement.Text = "Avenue Winston Churchill";
+            this.TxtAdresseEtablissement.BackColor = System.Drawing.Color.Maroon;
+            this.TxtAdresseEtablissement.ForeColor = System.Drawing.Color.Black;
+            this.TxtAdresseEtablissement.Location = new System.Drawing.Point(2, 61);
+            this.TxtAdresseEtablissement.Name = "txtAdresseEtablissement";
+            this.TxtAdresseEtablissement.Size = new System.Drawing.Size(212, 23);
+            this.TxtAdresseEtablissement.TabIndex = 1;
+            this.TxtAdresseEtablissement.Text = "Avenue Winston Churchill";
             // 
             // txtCpVille
             // 
-            this.txtCpVille.BackColor = System.Drawing.Color.Maroon;
-            this.txtCpVille.ForeColor = System.Drawing.Color.Black;
-            this.txtCpVille.Location = new System.Drawing.Point(2, 90);
-            this.txtCpVille.Name = "txtCpVille";
-            this.txtCpVille.Size = new System.Drawing.Size(212, 23);
-            this.txtCpVille.TabIndex = 1;
-            this.txtCpVille.Text = "83000 Toulon";
+            this.TxtCpVille.BackColor = System.Drawing.Color.Maroon;
+            this.TxtCpVille.ForeColor = System.Drawing.Color.Black;
+            this.TxtCpVille.Location = new System.Drawing.Point(2, 90);
+            this.TxtCpVille.Name = "txtCpVille";
+            this.TxtCpVille.Size = new System.Drawing.Size(212, 23);
+            this.TxtCpVille.TabIndex = 1;
+            this.TxtCpVille.Text = "83000 Toulon";
             // 
             // txtTel
             // 
-            this.txtTel.BackColor = System.Drawing.Color.Maroon;
-            this.txtTel.ForeColor = System.Drawing.Color.Black;
-            this.txtTel.Location = new System.Drawing.Point(2, 119);
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(212, 23);
-            this.txtTel.TabIndex = 1;
-            this.txtTel.Text = "0606060606";
+            this.TxtTel.BackColor = System.Drawing.Color.Maroon;
+            this.TxtTel.ForeColor = System.Drawing.Color.Black;
+            this.TxtTel.Location = new System.Drawing.Point(2, 119);
+            this.TxtTel.Name = "txtTel";
+            this.TxtTel.Size = new System.Drawing.Size(212, 23);
+            this.TxtTel.TabIndex = 1;
+            this.TxtTel.Text = "0606060606";
             // 
             // txaEmail
             // 
-            this.txaEmail.BackColor = System.Drawing.Color.Maroon;
-            this.txaEmail.ForeColor = System.Drawing.Color.Black;
-            this.txaEmail.Location = new System.Drawing.Point(2, 148);
-            this.txaEmail.Name = "txaEmail";
-            this.txaEmail.Size = new System.Drawing.Size(212, 23);
-            this.txaEmail.TabIndex = 1;
-            this.txaEmail.Text = "david@rmolinari.net";
+            this.TxaEmail.BackColor = System.Drawing.Color.Maroon;
+            this.TxaEmail.ForeColor = System.Drawing.Color.Black;
+            this.TxaEmail.Location = new System.Drawing.Point(2, 148);
+            this.TxaEmail.Name = "txaEmail";
+            this.TxaEmail.Size = new System.Drawing.Size(212, 23);
+            this.TxaEmail.TabIndex = 1;
+            this.TxaEmail.Text = "david@rmolinari.net";
             // 
             // txaAlAttention
             // 
-            this.txaAlAttention.BackColor = System.Drawing.Color.Maroon;
-            this.txaAlAttention.ForeColor = System.Drawing.Color.Black;
-            this.txaAlAttention.Location = new System.Drawing.Point(165, 87);
-            this.txaAlAttention.Name = "txaAlAttention";
-            this.txaAlAttention.Size = new System.Drawing.Size(175, 23);
-            this.txaAlAttention.TabIndex = 1;
-            this.txaAlAttention.Text = "Monsieur Meh";
+            this.TxaAlAttention.BackColor = System.Drawing.Color.Maroon;
+            this.TxaAlAttention.ForeColor = System.Drawing.Color.Black;
+            this.TxaAlAttention.Location = new System.Drawing.Point(165, 87);
+            this.TxaAlAttention.Name = "txaAlAttention";
+            this.TxaAlAttention.Size = new System.Drawing.Size(175, 23);
+            this.TxaAlAttention.TabIndex = 1;
+            this.TxaAlAttention.Text = "Monsieur Meh";
             // 
             // lblAttention
             // 
@@ -167,33 +170,33 @@ namespace Excuses
             // 
             // txaEtablissementBis
             // 
-            this.txaEtablissementBis.BackColor = System.Drawing.Color.Maroon;
-            this.txaEtablissementBis.ForeColor = System.Drawing.Color.Black;
-            this.txaEtablissementBis.Location = new System.Drawing.Point(165, 116);
-            this.txaEtablissementBis.Name = "txaEtablissementBis";
-            this.txaEtablissementBis.Size = new System.Drawing.Size(175, 23);
-            this.txaEtablissementBis.TabIndex = 1;
-            this.txaEtablissementBis.Text = "Lycée Bonaparte";
+            this.TxaEtablissementBis.BackColor = System.Drawing.Color.Maroon;
+            this.TxaEtablissementBis.ForeColor = System.Drawing.Color.Black;
+            this.TxaEtablissementBis.Location = new System.Drawing.Point(165, 116);
+            this.TxaEtablissementBis.Name = "txaEtablissementBis";
+            this.TxaEtablissementBis.Size = new System.Drawing.Size(175, 23);
+            this.TxaEtablissementBis.TabIndex = 1;
+            this.TxaEtablissementBis.Text = "Lycée Bonaparte";
             // 
             // txtVille
             // 
-            this.txtVille.BackColor = System.Drawing.Color.Maroon;
-            this.txtVille.ForeColor = System.Drawing.Color.Black;
-            this.txtVille.Location = new System.Drawing.Point(165, 145);
-            this.txtVille.Name = "txtVille";
-            this.txtVille.Size = new System.Drawing.Size(175, 23);
-            this.txtVille.TabIndex = 1;
-            this.txtVille.Text = "Toulon";
+            this.TxtVille.BackColor = System.Drawing.Color.Maroon;
+            this.TxtVille.ForeColor = System.Drawing.Color.Black;
+            this.TxtVille.Location = new System.Drawing.Point(165, 145);
+            this.TxtVille.Name = "txtVille";
+            this.TxtVille.Size = new System.Drawing.Size(175, 23);
+            this.TxtVille.TabIndex = 1;
+            this.TxtVille.Text = "Toulon";
             // 
             // panelTopGauche
             // 
             this.panelTopGauche.BackColor = System.Drawing.Color.OrangeRed;
-            this.panelTopGauche.Controls.Add(this.txaEmail);
-            this.panelTopGauche.Controls.Add(this.txtPrenomNOm);
-            this.panelTopGauche.Controls.Add(this.txtTel);
-            this.panelTopGauche.Controls.Add(this.txtEtablissement);
-            this.panelTopGauche.Controls.Add(this.txtAdresseEtablissement);
-            this.panelTopGauche.Controls.Add(this.txtCpVille);
+            this.panelTopGauche.Controls.Add(this.TxaEmail);
+            this.panelTopGauche.Controls.Add(this.TxtPrenomNOm);
+            this.panelTopGauche.Controls.Add(this.TxtTel);
+            this.panelTopGauche.Controls.Add(this.TxtEtablissement);
+            this.panelTopGauche.Controls.Add(this.TxtAdresseEtablissement);
+            this.panelTopGauche.Controls.Add(this.TxtCpVille);
             this.panelTopGauche.HorizontalScrollbarBarColor = true;
             this.panelTopGauche.HorizontalScrollbarHighlightOnWheel = false;
             this.panelTopGauche.HorizontalScrollbarSize = 10;
@@ -207,10 +210,10 @@ namespace Excuses
             // 
             // panelTopRight
             // 
-            this.panelTopRight.Controls.Add(this.txtVille);
+            this.panelTopRight.Controls.Add(this.TxtVille);
             this.panelTopRight.Controls.Add(this.lblAttention);
-            this.panelTopRight.Controls.Add(this.txaEtablissementBis);
-            this.panelTopRight.Controls.Add(this.txaAlAttention);
+            this.panelTopRight.Controls.Add(this.TxaEtablissementBis);
+            this.panelTopRight.Controls.Add(this.TxaAlAttention);
             this.panelTopRight.HorizontalScrollbarBarColor = true;
             this.panelTopRight.HorizontalScrollbarHighlightOnWheel = false;
             this.panelTopRight.HorizontalScrollbarSize = 10;
@@ -225,14 +228,14 @@ namespace Excuses
             // metroPanel1
             // 
             this.metroPanel1.Controls.Add(this.lblMainCinq);
-            this.metroPanel1.Controls.Add(this.cbxExcuses);
+            this.metroPanel1.Controls.Add(this.CbxExcuses);
             this.metroPanel1.Controls.Add(this.lblMainQuatre);
             this.metroPanel1.Controls.Add(this.lblMainTrois);
             this.metroPanel1.Controls.Add(this.lblMaindeux);
-            this.metroPanel1.Controls.Add(this.dateTimeSignature);
-            this.metroPanel1.Controls.Add(this.dateTimeMain);
+            this.metroPanel1.Controls.Add(this.DateTimeSignature);
+            this.metroPanel1.Controls.Add(this.DateTimeMain);
             this.metroPanel1.Controls.Add(this.lblMainUn);
-            this.metroPanel1.Controls.Add(this.cbxSexe);
+            this.metroPanel1.Controls.Add(this.CbxSexe);
             this.metroPanel1.Controls.Add(this.lblObjet);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
@@ -256,15 +259,15 @@ namespace Excuses
             // 
             // cbxExcuses
             // 
-            this.cbxExcuses.FormattingEnabled = true;
-            this.cbxExcuses.ItemHeight = 24;
-            this.cbxExcuses.Items.AddRange(new object[] {
+            this.CbxExcuses.FormattingEnabled = true;
+            this.CbxExcuses.ItemHeight = 24;
+            this.CbxExcuses.Items.AddRange(new object[] {
             "mon chien a volé mon cahier",
             "je n\'ai pas assez dormi"});
-            this.cbxExcuses.Location = new System.Drawing.Point(457, 64);
-            this.cbxExcuses.Name = "cbxExcuses";
-            this.cbxExcuses.Size = new System.Drawing.Size(735, 30);
-            this.cbxExcuses.TabIndex = 7;
+            this.CbxExcuses.Location = new System.Drawing.Point(457, 64);
+            this.CbxExcuses.Name = "cbxExcuses";
+            this.CbxExcuses.Size = new System.Drawing.Size(735, 30);
+            this.CbxExcuses.TabIndex = 7;
             // 
             // lblMainQuatre
             // 
@@ -297,17 +300,17 @@ namespace Excuses
             // 
             // dateTimeSignature
             // 
-            this.dateTimeSignature.Location = new System.Drawing.Point(966, 224);
-            this.dateTimeSignature.Name = "dateTimeSignature";
-            this.dateTimeSignature.Size = new System.Drawing.Size(226, 22);
-            this.dateTimeSignature.TabIndex = 5;
+            this.DateTimeSignature.Location = new System.Drawing.Point(966, 224);
+            this.DateTimeSignature.Name = "dateTimeSignature";
+            this.DateTimeSignature.Size = new System.Drawing.Size(226, 22);
+            this.DateTimeSignature.TabIndex = 5;
             // 
             // dateTimeMain
             // 
-            this.dateTimeMain.Location = new System.Drawing.Point(848, 27);
-            this.dateTimeMain.Name = "dateTimeMain";
-            this.dateTimeMain.Size = new System.Drawing.Size(226, 22);
-            this.dateTimeMain.TabIndex = 5;
+            this.DateTimeMain.Location = new System.Drawing.Point(848, 27);
+            this.DateTimeMain.Name = "dateTimeMain";
+            this.DateTimeMain.Size = new System.Drawing.Size(226, 22);
+            this.DateTimeMain.TabIndex = 5;
             // 
             // lblMainUn
             // 
@@ -321,15 +324,15 @@ namespace Excuses
             // 
             // cbxSexe
             // 
-            this.cbxSexe.FormattingEnabled = true;
-            this.cbxSexe.ItemHeight = 24;
-            this.cbxSexe.Items.AddRange(new object[] {
+            this.CbxSexe.FormattingEnabled = true;
+            this.CbxSexe.ItemHeight = 24;
+            this.CbxSexe.Items.AddRange(new object[] {
             "Madame,",
             "Monsieur,"});
-            this.cbxSexe.Location = new System.Drawing.Point(4, 27);
-            this.cbxSexe.Name = "cbxSexe";
-            this.cbxSexe.Size = new System.Drawing.Size(121, 30);
-            this.cbxSexe.TabIndex = 3;
+            this.CbxSexe.Location = new System.Drawing.Point(4, 27);
+            this.CbxSexe.Name = "cbxSexe";
+            this.CbxSexe.Size = new System.Drawing.Size(121, 30);
+            this.CbxSexe.TabIndex = 3;
             // 
             // lblObjet
             // 
@@ -344,7 +347,7 @@ namespace Excuses
             // metroPanel2
             // 
             this.metroPanel2.Controls.Add(this.lblAddExcuses);
-            this.metroPanel2.Controls.Add(this.txtExcusesAdd);
+            this.metroPanel2.Controls.Add(this.TxtExcusesAdd);
             this.metroPanel2.Controls.Add(this.btnReset);
             this.metroPanel2.Controls.Add(this.btnAddExcuse);
             this.metroPanel2.Controls.Add(this.btnSaveInfos);
@@ -371,11 +374,11 @@ namespace Excuses
             // 
             // txtExcusesAdd
             // 
-            this.txtExcusesAdd.Location = new System.Drawing.Point(2, 66);
-            this.txtExcusesAdd.Name = "txtExcusesAdd";
-            this.txtExcusesAdd.Size = new System.Drawing.Size(249, 23);
-            this.txtExcusesAdd.TabIndex = 9;
-            this.txtExcusesAdd.Text = "J\'ai raté mon train :>";
+            this.TxtExcusesAdd.Location = new System.Drawing.Point(2, 66);
+            this.TxtExcusesAdd.Name = "txtExcusesAdd";
+            this.TxtExcusesAdd.Size = new System.Drawing.Size(249, 23);
+            this.TxtExcusesAdd.TabIndex = 9;
+            this.TxtExcusesAdd.Text = "J\'ai raté mon train :>";
             // 
             // btnReset
             // 
@@ -480,5 +483,187 @@ namespace Excuses
         private MetroFramework.Controls.MetroLabel lblAddExcuses;
         private MetroFramework.Controls.MetroTextBox txtExcusesAdd;
         private MetroFramework.Controls.MetroTile btnReset;
+
+        public MetroTextBox TxtPrenomNOm
+        {
+            get
+            {
+                return txtPrenomNOm;
+            }
+
+            set
+            {
+                txtPrenomNOm = value;
+            }
+        }
+
+        public MetroTextBox TxtEtablissement
+        {
+            get
+            {
+                return txtEtablissement;
+            }
+
+            set
+            {
+                txtEtablissement = value;
+            }
+        }
+
+        public MetroTextBox TxtAdresseEtablissement
+        {
+            get
+            {
+                return txtAdresseEtablissement;
+            }
+
+            set
+            {
+                txtAdresseEtablissement = value;
+            }
+        }
+
+        public MetroTextBox TxtCpVille
+        {
+            get
+            {
+                return txtCpVille;
+            }
+
+            set
+            {
+                txtCpVille = value;
+            }
+        }
+
+        public MetroTextBox TxtTel
+        {
+            get
+            {
+                return txtTel;
+            }
+
+            set
+            {
+                txtTel = value;
+            }
+        }
+
+        public MetroTextBox TxaEmail
+        {
+            get
+            {
+                return txaEmail;
+            }
+
+            set
+            {
+                txaEmail = value;
+            }
+        }
+
+        public MetroTextBox TxaAlAttention
+        {
+            get
+            {
+                return txaAlAttention;
+            }
+
+            set
+            {
+                txaAlAttention = value;
+            }
+        }
+
+        public MetroTextBox TxaEtablissementBis
+        {
+            get
+            {
+                return txaEtablissementBis;
+            }
+
+            set
+            {
+                txaEtablissementBis = value;
+            }
+        }
+
+        public MetroTextBox TxtVille
+        {
+            get
+            {
+                return txtVille;
+            }
+
+            set
+            {
+                txtVille = value;
+            }
+        }
+
+        public MetroComboBox CbxSexe
+        {
+            get
+            {
+                return cbxSexe;
+            }
+
+            set
+            {
+                cbxSexe = value;
+            }
+        }
+
+        public DateTimePicker DateTimeMain
+        {
+            get
+            {
+                return dateTimeMain;
+            }
+
+            set
+            {
+                dateTimeMain = value;
+            }
+        }
+
+        public MetroComboBox CbxExcuses
+        {
+            get
+            {
+                return cbxExcuses;
+            }
+
+            set
+            {
+                cbxExcuses = value;
+            }
+        }
+
+        public DateTimePicker DateTimeSignature
+        {
+            get
+            {
+                return dateTimeSignature;
+            }
+
+            set
+            {
+                dateTimeSignature = value;
+            }
+        }
+
+        public MetroTextBox TxtExcusesAdd
+        {
+            get
+            {
+                return txtExcusesAdd;
+            }
+
+            set
+            {
+                txtExcusesAdd = value;
+            }
+        }
     }
 }

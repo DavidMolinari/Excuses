@@ -65,8 +65,10 @@ namespace Excuses
             }
         }
 
-        public static void generationCore(DocX doc)
+        public static void generationCore(DocX doc, Main main)
         {
+            ///
+     
         }
     }
 }

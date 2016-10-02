@@ -53,23 +53,23 @@ namespace Excuses
 
                     // Je les insère dans l'ordre inverse d'apparition sur le document
                     // Insert AFTER Self /!\ les paragraph vont s'empiler et le premier redescendra en bas.
-                    Paragraph pTopLeft = doc.InsertParagraph(txtPrenomNOm.Text);
+                    Paragraph pTopLeft = doc.InsertParagraph(TxtPrenomNOm.Text);
                     pTopLeft.InsertParagraphBeforeSelf("\n");
                     pTopLeft.InsertParagraphBeforeSelf("\n");
-                    pTopLeft.InsertParagraphAfterSelf(txaEmail.Text);
-                    pTopLeft.InsertParagraphAfterSelf(txtTel.Text);
-                    pTopLeft.InsertParagraphAfterSelf(txtCpVille.Text);
-                    pTopLeft.InsertParagraphAfterSelf(txtAdresseEtablissement.Text);
-                    pTopLeft.InsertParagraphAfterSelf(txtEtablissement.Text);
+                    pTopLeft.InsertParagraphAfterSelf(TxaEmail.Text);
+                    pTopLeft.InsertParagraphAfterSelf(TxtTel.Text);
+                    pTopLeft.InsertParagraphAfterSelf(TxtCpVille.Text);
+                    pTopLeft.InsertParagraphAfterSelf(TxtAdresseEtablissement.Text);
+                    pTopLeft.InsertParagraphAfterSelf(TxtEtablissement.Text);
                     /*
                     * BLOC DROITE
                     * A l’attention de { 0 }
                     * Nom de l'établissement
                     * Ville
                     */
-                    Paragraph pTopRight= doc.InsertParagraph("\t\t\t\t\t\t" + lblAttention.Text + txaAlAttention.Text);
-                    pTopRight.InsertParagraphAfterSelf("\t\t\t\t\t\t" + txtVille.Text);
-                    pTopRight.InsertParagraphAfterSelf("\t\t\t\t\t\t"+ txtEtablissement.Text);
+                    Paragraph pTopRight= doc.InsertParagraph("\t\t\t\t\t\t" + lblAttention.Text + TxaAlAttention.Text);
+                    pTopRight.InsertParagraphAfterSelf("\t\t\t\t\t\t" + TxtVille.Text);
+                    pTopRight.InsertParagraphAfterSelf("\t\t\t\t\t\t"+ TxtEtablissement.Text);
                     /*
                     * BLOC MAIN
                     */
@@ -82,8 +82,8 @@ namespace Excuses
                     pMain.InsertParagraphAfterSelf("\n");
                     pMain.InsertParagraphBeforeSelf(lblMainQuatre.Text); // 4
                     pMain.InsertParagraphBeforeSelf(lblMainTrois.Text); // 3
-                    pMain.InsertParagraphBeforeSelf(lblMaindeux.Text + cbxExcuses.GetItemText(this.cbxExcuses.SelectedItem)); // 2
-                    pMain.InsertParagraphBeforeSelf(cbxSexe.GetItemText(this.cbxSexe.SelectedItem) + lblMainUn.Text + dateTimeMain.ToString()) ; // 1
+                    pMain.InsertParagraphBeforeSelf(lblMaindeux.Text + CbxExcuses.GetItemText(this.CbxExcuses.SelectedItem)); // 2
+                    pMain.InsertParagraphBeforeSelf(CbxSexe.GetItemText(this.CbxSexe.SelectedItem) + lblMainUn.Text + DateTimeMain.ToString()) ; // 1
                     ///FIXME Remettre les paragraphes dans le bon Ordre
 
                     /*111
@@ -107,12 +107,13 @@ namespace Excuses
         private void btnSaveInfos_Click(object sender, EventArgs e)
         {
             ///FIXME Save Inputs modifications en temps réel
-            this.txtPrenomNOm.Text = txtPrenomNOm.Text;
+            ///
+
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
+        public void updateNom(String message)
         {
-
+            this.TxtPrenomNOm.Name = message;
         }
     }
 }
